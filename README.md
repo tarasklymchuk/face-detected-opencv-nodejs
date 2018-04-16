@@ -95,7 +95,19 @@ Check out <a href="https://medium.com/@muehler.v/machine-learning-with-opencv-an
 
 ## Requirements
 - cmake (unless you are using a prebuilt OpenCV release)
-
+- OpenCV
+## Install requirements
+```` bash
+sudo apt-get install build-essential
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+sudo apt-get install libopencv-dev
+````
+## Install requirements for Mac
+```` bash
+brew tap homebrew/science
+brew install opencv
+````
 ### On Windows
 On windows you will need Windows Build Tools to compile OpenCV and opencv4nodejs. If you don't have Visual Studio or Windows Build Tools installed, you can easily install the VS2015 build tools:
 ``` bash
