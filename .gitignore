@@ -11,4 +11,3 @@ tmpdata
 data/dnn
 .idea/
 dist
-sample/node_modules/*
