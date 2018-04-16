@@ -32,7 +32,7 @@ opencv4nodejs
 # Examples
 
 See <a href="https://github.com/justadudewhohacks/opencv4nodejs/tree/master/examples"><b>examples</b></a> for implementation.
-
+Original git repo <a href="https://github.com/justadudewhohacks/opencv4nodejs">Opencv4Nodejs</a>
 ### Face Detection
 
 ![face0](https://user-images.githubusercontent.com/31125521/29702727-c796acc4-8972-11e7-8043-117dd2761833.jpg)
