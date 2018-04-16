@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1"/>
+    <title>Opencv</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div class="container center">
+    <video id="localVideo" style="display: none;" mute autoplay></video>
+    <canvas id="canvas-video" width="640" height="480"></canvas>
+    <canvas id="canvas" width="640" height="480"></canvas>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+<script src="/app.js"></script>
+<script>window.addEventListener("load", pageReady);</script>
+</body>
+</html>
