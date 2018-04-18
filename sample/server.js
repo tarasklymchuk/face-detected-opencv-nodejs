@@ -1,9 +1,11 @@
 // modules
 var express = require('express'), http = require('http'), morgan = require('morgan'), path = require('path');
 var faceCheck = require('./lib/modules/faceCheck');
+var recognition = require('./lib/modules/recognition');
+const cnf = require('./config.json');
 // configuration files
 var configServer = {
-    httpPort: 8088,
+    httpPort: cnf.port,
     staticFolder: path.join(__dirname + '/lib/client')
 };
 
@@ -17,21 +19,19 @@ app.use(morgan('dev'));
 app.get('/', function (req, res) {
     res.sendFile('index.html', {root: staticFolder});
 });
-app.get('/face-identify', function (req, res) {
-    res.sendFile('index.html', {root: staticFolder});
-});
 
 // HTTP server
 var server = http.createServer(app);
 server.listen(app.get('port'), function () {
     console.log('HTTP server listening on port ' + app.get('port'));
 });
-//
+
 // // WebSocket server
 var io = require('socket.io')(server);
-// io.on('connection', require('./lib/socket'));
+
 io.on('connection', function (socket) {
     faceCheck(socket);
+    recognition(socket);
 });
 
 
