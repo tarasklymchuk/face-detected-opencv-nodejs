@@ -79,6 +79,5 @@ function convertDataURIToBinary(blob) {
 
 $('button').click(function () {
     const chanel = $(".face-method").find("input[type='radio']:checked").val();
-    ;
     socket.emit(chanel, canvas.toDataURL());
 });
