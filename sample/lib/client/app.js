@@ -1,5 +1,5 @@
 // // MODIFY THIS TO THE APPROPRIATE URL IF IT IS NOT BEING RUN LOCALLY
-var socket = io.connect('https://192.168.0.219:8088');
+var socket = io.connect('https://127.0.0.1:8088');
 
 var canvas = document.getElementById('canvas-video');
 var stream = document.getElementById('canvas');
