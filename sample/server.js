@@ -1,8 +1,17 @@
 // modules
-var express = require('express'), http = require('http'), morgan = require('morgan'), path = require('path');
+var express = require('express'), http = require('https'), morgan = require('morgan'), path = require('path');
+const fs = require('fs');
 var faceCheck = require('./lib/modules/faceCheck');
 var recognition = require('./lib/modules/recognition');
+var key = fs.readFileSync('./cer/private.key');
+var cert = fs.readFileSync( './cer/server.crt' );
+var ca = fs.readFileSync( './cer/server2.crt' );
 const cnf = require('./config.json');
+var options = {
+    key: key,
+    cert: cert,
+    ca: ca
+};
 // configuration files
 var configServer = {
     httpPort: cnf.port,
@@ -21,7 +30,7 @@ app.get('/', function (req, res) {
 });
 
 // HTTP server
-var server = http.createServer(app);
+var server = http.createServer(options, app);
 server.listen(app.get('port'), function () {
     console.log('HTTP server listening on port ' + app.get('port'));
 });

@@ -7,8 +7,8 @@ module.exports = function (socket) {
         const basePath = path.join(__dirname + '/imgs');
         const imgsPath = path.resolve(basePath, 'recognitions');
         const nameMappings =  [
-            "taras",
-            "andrew"
+            'taras',
+            'andrew',
         ];
          const imgFiles = fs.readdirSync(imgsPath);
             if(imgFiles.length){
